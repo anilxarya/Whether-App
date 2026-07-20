@@ -1,0 +1,32 @@
+import { useState, useEffect } from 'react'
+import './App.css'
+import Search from './Components/Search'
+import ShowData from './Components/ShowData'
+
+
+
+
+
+function App() {
+  const [place, setPlace] = useState("")
+  const [whether, setWhether] = useState([])
+ 
+  
+  return (
+    <div className='w-3xl h-100 mx-auto my-5 p-10  bg-linear-to-br from-[#8DD7FF] via-[#4EA8FF] to-[#1E63E9] rounded-lg flex flex-col items-center'>
+        <div className='flex flex-col text-white gap-2 mb-8'>
+
+          <div className='flex gap-2 items-center'>
+            <img className='w-9 h-9' src="src\assets\partly-cloudy.png" alt="app-image" />
+            <h1 className='text-3xl font-semibold'> Whether App</h1>
+          </div>
+
+          <p className='pl-5'>Get real-time whether updates</p>
+        </div>
+        <Search location={place} setLocation={setPlace} setData={setWhether}/>
+        <ShowData whetherData={whether}/>
+    </div>
+  )
+}
+
+export default App
