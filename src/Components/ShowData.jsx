@@ -3,8 +3,6 @@ import React from 'react'
 
 
 const ShowData = ({ whetherData }) => {
-  //  const whetherArray = Object.values(whetherData)
-  //  console.log("whetherArray:", whetherArray);
 
   return (
     <div className='flex w-full h-80 mt-5  bg-blue-600/30 rounded-sm py-3 px-5 '>
@@ -18,7 +16,7 @@ const ShowData = ({ whetherData }) => {
           <div className='flex align-middle gap-2 mt-4 mb-7 font-semibold text-[14px]'>
             <div  className=' bg-black/20 p-2 px-4  rounded-full'> 
             Feels Like {whetherData.current.feelslike_c}&deg; C</div>
-            <div  className=' bg-black/20 py-2  px-4 rounded-full font-semibold'><span className='text-red-400 font-medium'>H: </span>{whetherData.forecast.forecastday[0].day.maxtemp_c}&deg;C<span className='text-blue-400 ml-2 font-medium'>L: </span> {whetherData.forecast.forecastday[0].day.mintemp_c}&deg;C</div>
+            <div  className=' bg-black/20 py-2  px-4 rounded-full font-semibold'><span className='text-red-400 font-medium'>H: </span>{whetherData.forecast.forecastday[0].day.maxtemp_c}&deg;C<span className='text-blue-400 ml-3 font-medium'>L: </span> {whetherData.forecast.forecastday[0].day.mintemp_c}&deg;C</div>
           </div>
         </div>
           <div className='flex flex-col gap-12 w-2/5  text-white'>
