@@ -1,21 +1,21 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Search = ({setLocation,setData,location}) => {
+const Search = ({setData}) => {
    const [value, setValue ] = useState("")
+   
+   
 
-   const getInputData = (e) =>{
-        setLocation(value)
+   const getInputData = () =>{
         getData()
    }
     
   const getData = async () => {
   try {
-     
-     const response= await fetch('http://api.weatherapi.com/v1/forecast.json?key=58acd0e9a2944ce2855161401261807&q=${location}&days=1&aqi=yes&alerts=yes')
+     const apilink= `http://api.weatherapi.com/v1/forecast.json?key=58acd0e9a2944ce2855161401261807&q=${value}&days=1&aqi=yes&alerts=yes`
+     const response= await fetch(apilink)
      const data= await response.json()
      setData(data)
-     console.log(location)
      
      
   } catch (error) {
@@ -41,7 +41,7 @@ const Search = ({setLocation,setData,location}) => {
       </button>
     </div>
     <div>
-      <p  className='text-white text-[14px] mt-2'>Press Enter to search</p>
+      <p  className='text-white text-[14px] mt-2'>Press Enter to search  &#10550;</p>
     </div>
     </>
     
