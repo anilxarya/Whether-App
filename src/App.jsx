@@ -14,7 +14,7 @@ function App() {
  
   
   return (
-    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-linear-to-br from-[#8DD7FF] via-[#4EA8FF]  to-[#1E63E9] rounded-lg flex flex-col items-center font-sans'>
+    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-[url("src/assets/pexels-kseniya.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
         <div className='flex flex-col text-white gap-2 mb-8'>
 
           <div className='flex gap-2 items-center'>
