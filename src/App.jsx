@@ -26,7 +26,7 @@ function App() {
         </div>
         <Search  setData={setWhether}/>
         <ShowData whetherData={whether}/>
-        <cards/>
+        <Cards whetherData={whether}/>
         <AboutWeather whetherData={whether}/>
 
     </div>

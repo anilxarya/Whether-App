@@ -7,8 +7,7 @@ const AboutWeather = ({whetherData}) => {
         <div className='flex flex-col text-white'>
             <p className='text-[16px] font-medium mb-3'>About the weather</p>
             {whetherData && (
-                <p className='text-[14px] font-normal'>{whetherData.alerts.alert[1].headline}{console.log(whetherData)}</p>
-                
+                <p className='text-[14px] font-normal'>No active alerts in your area.</p>               
             )}
            
         </div>

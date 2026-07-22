@@ -9,8 +9,8 @@ const ShowData = ({ whetherData }) => {
       {whetherData && (
         <>
         <div className='flex flex-col  w-3/5  text-white'>
-          <span className='mt-4 pl-2 text-[28px] font-medium'>{whetherData.location.name}</span>
-          <span className=' text-[16px] font-normal'><img className='w-5 h-5 mr-1 inline' src="src\assets\mappin.png" alt="map-pin" />{whetherData.location.country}</span>
+          <span className='mt-4 pl-1 text-[28px] font-medium'>{whetherData.location.name}</span>
+          <span className=' text-[16px] font-normal'><img className='w-5 h-5 mr-1 inline' src="src\assets\location.png" alt="map-pin" />{whetherData.location.country}</span>
           <span className='mt-5 text-6xl font-medium'>{whetherData.current.temp_c}&deg;c</span>
           <span className='mt-4 text-[18px] font-normal'>{whetherData.current.condition.text}</span>
           <div className='flex align-middle gap-2 mt-4 mb-7 font-semibold text-[14px]'>
