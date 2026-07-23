@@ -11,6 +11,10 @@ import AboutWeather from './Components/AboutWeather'
 
 function App() {
   const [whether, setWhether] = useState(null)
+  const [isloading, setIsloading] = useState()
+  const [error, setErrors] = useState("")
+
+  
  
   
   return (
@@ -24,9 +28,9 @@ function App() {
 
           <p className='pl-5'>Get real-time whether updates</p>
         </div>
-        <Search  setData={setWhether}/>
-        <ShowData whetherData={whether}/>
-        <Cards whetherData={whether}/>
+        <Search  setData={setWhether} status={setIsloading} setError={setErrors}/>
+        <ShowData whetherData={whether} dataStatus={isloading} code={error}/>
+        <Cards whetherData={whether} />
         <AboutWeather whetherData={whether}/>
 
     </div>

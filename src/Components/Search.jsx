@@ -1,10 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Search = ({ setData }) => {
+const Search = ({ setData, status ,setError }) => {
   const [value, setValue] = useState("")
-
-
 
   const getInputData = (e) => {
     e.preventDefault()
@@ -13,14 +11,26 @@ const Search = ({ setData }) => {
 
   const getData = async () => {
     try {
+      status(true)
       const apilink = `http://api.weatherapi.com/v1/forecast.json?key=58acd0e9a2944ce2855161401261807&q=${value}&days=1&aqi=yes&alerts=yes`
       const response = await fetch(apilink)
       const data = await response.json()
-      setData(data)
+      await new Promise(resolve => setTimeout(resolve, 2000))
 
+
+
+      if (data.error) {
+        setError(data.error.message);
+        setData(null);
+        return;
+      }
+      setData(data)
 
     } catch (error) {
       console.log("something went wrong", error)
+    }
+    finally {
+      status(false)
     }
   }
 
