@@ -16,11 +16,11 @@ function App() {
 
 
   return (
-    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-[url("src/assets/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
+    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-[url("/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
         <div className='flex flex-col text-white gap-2 mb-8'>
 
           <div className='flex gap-2 items-center'>
-            <img className='w-9 h-9' src="src\assets\partly-cloudy.png" alt="app-image" />
+            <img className='w-9 h-9' src="/partly-cloudy.png" alt="app-image" />
             <h1 className='text-3xl font-semibold'> Whether App</h1>
           </div>
 

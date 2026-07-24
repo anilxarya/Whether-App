@@ -41,7 +41,7 @@ const Search = ({ setData, status ,setError }) => {
     <>
       <div className='flex  gap-2 justify-between items-center w-full h-fit px-3 py-2 rounded-md bg-white shadow-2xl'>
         <form className='flex gap-3 items-center w-full ' onSubmit={getInputData}>
-          <img className='w-5 h-5' src="src\assets\search.png" alt="whether-search-icon" />
+          <img className='w-5 h-5' src="/search.png" alt="whether-search-icon" />
           <input className='w-full outline-none cursor-pointer '
             type="text"
             value={value}
