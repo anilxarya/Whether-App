@@ -12,13 +12,11 @@ import AboutWeather from './Components/AboutWeather'
 function App() {
   const [whether, setWhether] = useState(null)
   const [isloading, setIsloading] = useState()
-  const [error, setErrors] = useState("")
+  const [error, setErrors] = useState()
 
-  
- 
-  
+
   return (
-    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-[url("src/assets/pexels-kseniya.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
+    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-[url("src/assets/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
         <div className='flex flex-col text-white gap-2 mb-8'>
 
           <div className='flex gap-2 items-center'>
@@ -30,9 +28,7 @@ function App() {
         </div>
         <Search  setData={setWhether} status={setIsloading} setError={setErrors}/>
         <ShowData whetherData={whether} dataStatus={isloading} code={error}/>
-        <Cards whetherData={whether} />
-        <AboutWeather whetherData={whether}/>
-
+        <Cards whetherData={whether}code={error} />
     </div>
   )
 }

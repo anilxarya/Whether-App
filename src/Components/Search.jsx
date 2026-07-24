@@ -16,15 +16,18 @@ const Search = ({ setData, status ,setError }) => {
       const response = await fetch(apilink)
       const data = await response.json()
       await new Promise(resolve => setTimeout(resolve, 2000))
-
+      console.log(data)
+      
 
 
       if (data.error) {
         setError(data.error.message);
-        setData(null);
+        setData(null)
         return;
       }
+      setError("")
       setData(data)
+      
 
     } catch (error) {
       console.log("something went wrong", error)
@@ -36,7 +39,7 @@ const Search = ({ setData, status ,setError }) => {
 
   return (
     <>
-      <div className='flex  gap-2 justify-between items-center w-full h-fit px-3 py-2 rounded-md bg-white'>
+      <div className='flex  gap-2 justify-between items-center w-full h-fit px-3 py-2 rounded-md bg-white shadow-2xl'>
         <form className='flex gap-3 items-center w-full ' onSubmit={getInputData}>
           <img className='w-5 h-5' src="src\assets\search.png" alt="whether-search-icon" />
           <input className='w-full outline-none cursor-pointer '
@@ -46,7 +49,7 @@ const Search = ({ setData, status ,setError }) => {
             onChange={(e) => setValue(e.target.value)} />
         </form>
 
-        <button className='w-20 py-1 rounded-sm text-white bg-[#2476e5] cursor-pointer'
+        <button className='w-28 py-1 text-[18px] rounded-sm text-white bg-gray-800 cursor-pointer'
           onClick={getInputData}>
           Search
         </button>
