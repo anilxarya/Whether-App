@@ -12,7 +12,7 @@ const Search = ({ setData, status ,setError }) => {
   const getData = async () => {
     try {
       status(true)
-      const apilink = `http://api.weatherapi.com/v1/forecast.json?key=58acd0e9a2944ce2855161401261807&q=${value}&days=1&aqi=yes&alerts=yes`
+      const apilink = `https://api.weatherapi.com/v1/forecast.json?key=58acd0e9a2944ce2855161401261807&q=${value}&days=1&aqi=yes&alerts=yes`
       const response = await fetch(apilink)
       const data = await response.json()
       await new Promise(resolve => setTimeout(resolve, 2000))
