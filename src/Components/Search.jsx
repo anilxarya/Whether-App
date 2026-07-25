@@ -42,7 +42,7 @@ const Search = ({ setData, status ,setError }) => {
       <div className='flex  gap-2 justify-between items-center w-full h-fit px-3 py-2 rounded-md bg-white shadow-2xl'>
         <form className='flex gap-3 items-center w-full ' onSubmit={getInputData}>
           <img className='w-5 h-5' src="/search.png" alt="whether-search-icon" />
-          <input className='w-full outline-none cursor-pointer '
+          <input className='w-full outline-none cursor-pointer text-[18px] '
             type="text"
             value={value}
             placeholder='Enter city name'
@@ -50,7 +50,7 @@ const Search = ({ setData, status ,setError }) => {
         </form>
 
         <button className='w-28 py-1 text-[18px] rounded-sm text-white bg-gray-800 cursor-pointer'
-          onClick={getInputData}>
+          onClick={getInputData} >
           Search
         </button>
       </div>

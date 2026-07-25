@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-    <div className='w-3xl h-auto mx-auto my-5 p-10  bg-[url("/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
+    <div className='w-3xl h-auto mx-auto mm-5  px-10 pt-10 pb-2  bg-[url("/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
         <div className='flex flex-col text-white gap-2 mb-8'>
 
           <div className='flex gap-2 items-center'>
@@ -28,9 +28,11 @@ function App() {
         </div>
         <Search  setData={setWhether} status={setIsloading} setError={setErrors}/>
         <ShowData whetherData={whether} dataStatus={isloading} code={error}/>
-        <Cards whetherData={whether}code={error} />
+        <Cards whetherData={whether} code={error} />
+        <p className='text-white mt-4'>Made By Anil 💙</p>
     </div>
   )
 }
+
 
 export default App

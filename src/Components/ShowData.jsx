@@ -31,7 +31,7 @@ const ShowData = ({ whetherData, dataStatus, code }) => {
           <>
             <div className='flex flex-col  w-3/5  text-white'>
               <span className='mt-4 pl-1 text-[28px] font-medium'>{whetherData?.location?.name}</span>
-              <span className=' text-[16px] font-normal'><img className='w-5 h-5 mr-1 inline' src="src\assets\location.png" alt="map-pin" />{whetherData?.location?.country}</span>
+              <span className=' text-[16px] font-normal'><img className='w-5 h-5 mr-1 inline' src="/location.png" alt="map-pin" />{whetherData?.location?.country}</span>
               <span className='mt-5 text-6xl font-medium'>{whetherData?.current?.temp_c}&deg;c</span>
             
               <div className='flex align-middle gap-2 mt-8 mb-7 font-semibold text-[14px]'>
@@ -44,7 +44,7 @@ const ShowData = ({ whetherData, dataStatus, code }) => {
               <div className='w-fit border-2 border-gray-800 rounded-full'><img className='w-30 h-30 m-2 ' src={whetherData?.current?.condition?.icon} alt="whether-img" /></div>
               <span className='mt-3 text-[18px] font-normal'>{whetherData?.current?.condition?.text}</span>
               <div className='flex mt-4 items-center'>
-                <img  className='inline w-4 h-4  mr-2' src="src\assets\gray-clock-circle-round-27518.svg"/>
+                <img  className='inline w-4 h-4  mr-2' src="/gray-clock-circle-round-27518.svg"/>
               <span >{whetherData?.current?.last_updated}</span>
               </div>
               
