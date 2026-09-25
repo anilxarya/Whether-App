@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-    <div className='w-3xl h-auto mx-auto mm-5  px-10 pt-10 pb-2  bg-[url("/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
+    <div className='w-3xl h-auto mx-auto mt-8 px-10 pt-10 pb-2  bg-[url("/pexels-eva-bro.jpg")] bg-cover bg-center rounded-lg flex flex-col items-center font-sans'>
         <div className='flex flex-col text-white gap-2 mb-8'>
 
           <div className='flex gap-2 items-center'>
